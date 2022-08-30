@@ -1,0 +1,173 @@
+:root {
+  --font-family: "SCDream6";
+  --background-color: #f5f5f6;
+  --shadow-color: #c0c0c0;
+  --content-color: #c0c0c0;
+  --title-color: #363543;
+  --accent-color: #5161ce;
+  --place-holder-color: #9c9c9c;
+  --light-color: #fff; /* 글씨나 밝은부분 */
+}
+
+@font-face {
+  font-family: "SCDream6";
+  src: url(/font/SCDream6.otf);
+}
+
+html,
+body {
+  height: 100%;
+  padding: 1%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--background-color);
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px 3px var(--shadow-color);
+  padding: 1%;
+}
+
+.title {
+  height: 7%;
+  padding-top: 0.5%;
+  color: var(--title-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.contents {
+  height: 81%;
+  display: flex;
+  flex-direction: row;
+}
+
+
+iframe {
+  width: 21%;
+  height: 100%;
+}
+
+table {
+  width: 81%;
+  height: 100%;
+}
+
+thead {
+  height: 5%;
+  border-radius: 10px;
+}
+
+tbody {
+  height: 95%;
+}
+.th_color {
+  background-color: var(--accent-color);
+  color: var(--light-color);
+}
+
+.th_top {
+  vertical-align: top;
+}
+
+.showbtn{
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  color: var(--accent-color);
+  font-size: inherit;
+  line-height: normal;
+  vertical-align: middle;
+  background-color: var(--light-color);
+  cursor: pointer;
+  border: 1px solid var(--accent-color);
+  border-radius: 0.25em;
+}
+
+.deletebtn{
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  color: var(--accent-color);
+  font-size: inherit;
+  line-height: normal;
+  vertical-align: middle;
+  background-color: var(--light-color);
+  cursor: pointer;
+  border: 1px solid var(--accent-color);
+  border-radius: 0.25em;
+}
+
+.showbtn:hover{
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  color: var(--light-color);
+  font-size: inherit;
+  line-height: normal;
+  vertical-align: middle;
+  background-color: var(--accent-color);
+  cursor: pointer;
+  border: 1px solid var(--accent-color);
+  border-radius: 0.25em;
+}
+
+.deletebtn:hover{
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  color: var(--light-color);
+  font-size: inherit;
+  line-height: normal;
+  vertical-align: middle;
+  background-color: var(--accent-color);
+  cursor: pointer;
+  border: 1px solid var(--accent-color);
+  border-radius: 0.25em;
+}
+
+.bottom {
+  height: 10%;
+  display: flex;
+  justify-content: end;
+}
+
+.pagebtn{
+  margin-top: 1.5%;
+  width: 7.3%;
+  height: 40px;
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  color: var(--accent-color);
+  font-size: inherit;
+  line-height: normal;
+  vertical-align: middle;
+  background-color: var(--light-color);
+  cursor: pointer;
+  border: 1px solid var(--accent-color);
+  border-radius: 0.25em;
+}
+
+.pagebtn:hover {
+  margin-top: 1.5%;
+  width: 7.3%;
+  height: 40px;
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  color: var(--light-color);
+  font-size: inherit;
+  line-height: normal;
+  vertical-align: middle;
+  background-color: var(--accent-color);
+  cursor: pointer;
+  border: 1px solid var(--accent-color);
+  border-radius: 0.25em;
+}
