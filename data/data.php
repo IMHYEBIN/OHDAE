@@ -74,7 +74,7 @@
 					<th class="th_acc" rowspan="2">비고</th>
 					<th class="th_set" rowspan="2" colspan="2">관리</th>
 				</tr>
-				<tr class="th_color th_top">
+				<tr class="th_color th_top th_hair_type_item">
 					<th class="th_hair_type1">NORWOOD</th>
 					<th class="th_hair_type2">LUDWIG</th>
 					<th class="th_hair_type3">BASP</th>
@@ -94,19 +94,19 @@
 							// echo "</a>";
 							?>
 						</td>
-						<td><?php echo $row["age"]; ?></td>
-						<td><?php echo $row["gender"]; ?></td>
-						<td><?php echo $row["country"]; ?></td>
-						<td><?php echo $row["blood_type"]; ?></td>
-						<td><?php echo $row["hair_type1"]; ?></td>
-						<td><?php echo $row["hair_type2"]; ?></td>
-						<td><?php echo $row["hair_type3"]; ?></td>
-						<td><?php echo $row["skin_type"]; ?></td>
-						<td><?php echo $row["img1"]; ?></td>
-						<td><?php echo $row["img2"]; ?></td>
-						<td><?php echo $row["date"]; ?></td>
-						<td><?php echo $row["time"]; ?></td>
-						<td><?php echo $row["acc"]; ?></td>
+						<td class="td_id"><?php echo $row["age"]; ?></td>
+						<td class="td_name"><?php echo $row["gender"]; ?></td>
+						<td class="td_age"><?php echo $row["country"]; ?></td>
+						<td class="td_gender"><?php echo $row["blood_type"]; ?></td>
+						<td class="td_country"><?php echo $row["hair_type1"]; ?></td>
+						<td class="td_bloodtype"><?php echo $row["hair_type2"]; ?></td>
+						<td class="td_hair_type"><?php echo $row["hair_type3"]; ?></td>
+						<td class="td_skin_type"><?php echo $row["skin_type"]; ?></td>
+						<td class="td_img1"><?php echo $row["img1"]; ?></td>
+						<td class="td_img2"><?php echo $row["img2"]; ?></td>
+						<td class="td_date"><?php echo $row["date"]; ?></td>
+						<td class="td_time"><?php echo $row["time"]; ?></td>
+						<td class="td_acc"><?php echo $row["acc"]; ?></td>
 						<?php
 						echo "<td><a class='showbtn' href='/data/data_img.php?img1=" . $row["img1"] . "&img2=" . $row["img2"] . "' target='frame_data_img'>보기</a></td>";
 						echo "<td><a class='deletebtn' href='/data/action/action_data_delete.php?id=" . $row["id"] . "'>삭제</a></td>";
@@ -119,7 +119,6 @@
 			</table>
 		</div>
 		<div class="bottom">
-			&nbsp;&nbsp;&nbsp;&nbsp;
 			<?php
 			//currentPage 변수가 1보다 클때만 이전 버튼이 활성화 되도록 함
 			if ($currentPage > 1) {
@@ -139,9 +138,7 @@
 			}
 			mysqli_close($conn);
 			?>
-			&nbsp;&nbsp;
 			<!-- <a class="btn btn-primary" href="/result2_add_form.php">신규 등록</a> -->
-			<br><br><br><br><br>
 			<script type="text/javascript" src="/bootstrap/js/bootstrap.js"></script>
 		</div>
 	</div>

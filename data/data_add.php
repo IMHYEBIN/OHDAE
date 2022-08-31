@@ -196,7 +196,7 @@
                     </tr>
                     <tr>
                         <th class="th2" colspan="2">비고</th>
-                        <td><input type="text" name='acc' placeholder="비고를 입력해주세요." required></td>
+                        <td><input type="text" name='acc' placeholder="비고를 입력해주세요." ></td>
                     </tr>
                 </table>
 

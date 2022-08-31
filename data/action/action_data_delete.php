@@ -8,35 +8,52 @@
 </head>
 
 <body>
-    <h1>삭제</h1>
     <?php
-    //mysql 커넥션 객체 생성
+    ////////////////////////////////////////////////////////////////////////////////////////mysql 커넥션 객체 생성
     $conn = mysqli_connect("localhost", "server", "00000000", "dataset");
 
-    //board_delete_form.php 페이지에서 넘어온 글 번호값 저장 및 출력
+    ////////////////////////////////////////////////////////////////////////////////////////board_delete_form.php 페이지에서 넘어온 글 번호값 저장 및 출력
     $id = $_GET["id"];
+    
+    ////////////////////////////////////////////////////////////////////////////////////////커넥션 객체 생성 여부 확인
+    // if ($conn) {
+    //     echo "연결 성공<br>";
+    // } else {
+    //     die("연결 실패 : " . mysqli_connect_error());
+    // }
 
-    echo "id : " . $id . "<br>";
+    //삭제 결과 확인
+    echo $sql1 = "SELECT count(id) as count FROM result2 WHERE id='" . $id . "'";
+    $res1 = mysqli_query($conn, $sql1);
+    $row1 = mysqli_fetch_array($res1);
 
+    echo "GET ID" . $id;
+    echo "확인할 ID" . $row1['count'];
 
-
-    //커넥션 객체 생성 여부 확인
-    if ($conn) {
-        echo "연결 성공<br>";
+    if ($row1['count'] != 0) {
+        echo "<script>
+        alert('삭제 성공했습니다.');
+        </script>";
     } else {
-        die("연결 실패 : " . mysqli_connect_error());
+        echo "<script>
+        alert('삭제 실패했습니다.');
+        </script>";
     }
-    //board테이블에서 입력된 글 번호와, 글 비밀번호가 일치하는 행 삭제 쿼리
-    echo $sql = "DELETE FROM result2 WHERE id='" . $id . "'";
-    //쿼리 실행 여부 확인
-    if (mysqli_query($conn, $sql)) {
-        echo "삭제 성공: " . $result; //과제 작성시 에러메시지 출력하게 만들기
-    } else {
-        echo "삭제 실패: " . mysqli_error($conn);
-    }
+
+    ////////////////////////////////////////////////////////////////////////////////////////board테이블에서 입력된 글 번호와, 글 비밀번호가 일치하는 행 삭제 쿼리
+    $sql = "DELETE FROM result2 WHERE id='" . $id . "'";
+    $res = mysqli_query($conn, $sql);
+
+    ///////////////////////////////////////////////////////////////////////////////////////쿼리 실행 여부 확인
+    // if (mysqli_query($conn, $sql)) {
+    //     echo "삭제 성공: " . $result; //과제 작성시 에러메시지 출력하게 만들기
+    // } else {
+    //     echo "삭제 실패: " . mysqli_error($conn);
+    // }
+
+
 
     mysqli_close($conn);
-    //헤더함수를 이용하여 리스트 페이지로 리다이렉션
     ?>
 </body>
 
