@@ -171,7 +171,6 @@ td {
 }
 
 .pagebtn {
-  position: absolute;
   margin-top: 0.6%;
   width: 6.4%;
   height: 40px;
@@ -201,4 +200,13 @@ td {
   cursor: pointer;
   border: 1px solid var(--accent-color);
   border-radius: 0.25em;
+}
+
+.before{
+  position: absolute;
+  margin-right: 1370px;
+}
+
+.after{
+  position: absolute;
 }
