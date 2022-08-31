@@ -21,8 +21,9 @@
                 <tr>
                     <th class="th1">이미지1</th>
                     <td class="flex_row">
-                        <label for="ex_file">파일찾기</label>
-                        <input id="ex_file" type="file" id="imgFile1" name="imgFile" /><br>
+                        <div id="filename1"></div>
+                        <label for="ex_file1" onclick="loadFile()">파일찾기</label>
+                        <input id="ex_file1" type="file" name="imgFile1" onchange="javascript: document.getElementById('filename1').innerHTML = this.value" /><br>
                         <input class="upload_btn" type="submit" value="업로드" />
                     </td>
                 </tr>
@@ -31,8 +32,9 @@
                 <tr>
                     <th class="th1">이미지2</th>
                     <td class="flex_row">
-                        <label for="ex_file">파일찾기</label>
-                        <input id="ex_file" type="file" id="imgFile2" name="imgFile" /><br>
+                        <div id="filename2"></div>
+                        <label for="ex_file2">파일찾기</label>
+                        <input id="ex_file2" type="file" name="imgFile2" onchange="javascript: document.getElementById('filename2').innerHTML = this.value" /><br>
                         <input class="upload_btn" type="submit" value="업로드" />
                     </td>
                 </tr>
