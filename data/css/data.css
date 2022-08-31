@@ -42,15 +42,14 @@ a {
 }
 
 .title {
-  height: 7%;
-  padding-top: 0.5%;
+  height: 5%;
   color: var(--title-color);
   font-size: 1.5rem;
   font-weight: 600;
 }
 
 .contents {
-  height: 81%;
+  height: 88%;
   display: flex;
   flex-direction: row;
 }
@@ -136,13 +135,13 @@ tbody {
 }
 
 .bottom {
-  height: 10%;
+  height: 7%;
   display: flex;
   justify-content: end;
 }
 
 .pagebtn{
-  margin-top: 1.5%;
+  margin-top: 0.6%;
   width: 7.3%;
   height: 40px;
   display: inline-block;
@@ -158,7 +157,7 @@ tbody {
 }
 
 .pagebtn:hover {
-  margin-top: 1.5%;
+  margin-top: 0.6%;
   width: 7.3%;
   height: 40px;
   display: inline-block;
